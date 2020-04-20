@@ -23,6 +23,10 @@
               "src/assets"
             ],
             "styles": [
+              "src/css/bootstrap.min.css",
+              "src/css/backend.css",
+              "src/css/font-awesome.min.css",
+              "src/css/frontend.css",
               "src/styles.css"
             ],
             "scripts": []
