@@ -12,7 +12,7 @@ export class ProductManagerComponent implements OnInit {
   products: Product[];
   selected: Product;
 
-  cconstructor(
+  constructor(
     private productService: ProductService
   ) { 
     console.log('constructor')
