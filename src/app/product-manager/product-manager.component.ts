@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../product.service';
-import { Product } from '../Product';
-
+import { Component, OnInit } from "@angular/core";
+import { ProductService } from "../product.service";
+import { Product } from "../Product";
 
 @Component({
-  selector: 'app-product-manager',
-  templateUrl: './product-manager.component.html',
-  styleUrls: ['./product-manager.component.css']
+  selector: "app-product-manager",
+  templateUrl: "./product-manager.component.html",
+  styleUrls: ["./product-manager.component.css"]
 })
 export class ProductManagerComponent implements OnInit {
   products: Product[];
@@ -14,22 +13,24 @@ export class ProductManagerComponent implements OnInit {
 
   constructor(
     private productService: ProductService
-  ) { 
-    console.log('constructor')
+    ) {
+    console.log("constructor");
   }
 
   ngOnInit() {
     this.getProducts();
   }
-getProducts(){
-   this.productService.getProducts().subscribe(data => {
-     this.products = data;
+  getProducts() {
+    this.productService.getProducts().subscribe(data => {
+      this.products = data;
     });
   }
 
-  removeItem(id){
+  removeItem(id) {
     this.productService.removeProduct(id).subscribe(response => {
-      this.products = this.products.filter(product => product.id != response.id);
-    })
+      this.products = this.products.filter(
+        product => product.ID != response.ID
+      );
+    });
   }
 }
