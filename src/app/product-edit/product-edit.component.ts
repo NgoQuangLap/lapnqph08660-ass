@@ -10,6 +10,7 @@ import { Product } from "../Product";
 })
 export class ProductEditComponent implements OnInit {
   product: Product;
+  
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
