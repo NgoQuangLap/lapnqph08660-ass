@@ -8,8 +8,8 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch:'full'},
-  {path: 'home', component: ProductListComponent},
+  {path: '', redirectTo: 'product', pathMatch:'full'},
+  {path: 'product', component: ProductListComponent},
   {path: 'manager', component: ProductManagerComponent},
   {path: 'detail', component: ProductDetailComponent},
   {path: 'product-add', component: ProductAddComponent},
