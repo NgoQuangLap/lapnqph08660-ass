@@ -10,7 +10,7 @@ import { Product } from "../Product";
 })
 export class ProductEditComponent implements OnInit {
   product: Product;
-  
+
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
@@ -32,5 +32,6 @@ export class ProductEditComponent implements OnInit {
     this.productService.updateProduct(this.product).subscribe(data => {
       this.router.navigateByUrl("/manager");
     });
+
   }
 }
