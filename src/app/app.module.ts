@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductManagerComponent } from './product-manager/product-manager.component';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { ProductManagerComponent } from './product-manager/product-manager.compo
     HttpClientModule,
     NgbModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

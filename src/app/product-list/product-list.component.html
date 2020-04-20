@@ -274,10 +274,10 @@
                 <div class="product-list">
                     <div class="row">
 
-                        <div ngclass="col-lg-4 col-sm-6" ngFor="let product of products">
+                        <div ngclass="col-lg-4 col-sm-6" *ngFor="let product of products">
                             <div class="product-item">
                                 <div class="pi-pic">
-                                    <img src="../assets/images/man-2.jpg" alt="">
+                                    <img [src]="product.Images" alt="" width="280" height="280">
                                     <div class="icon">
                                         <i class="icon_heart_alt"></i>
                                     </div>
@@ -289,10 +289,12 @@
                                 </div>
                                 <div class="pi-text">
                                     <a href="#">
-                                        <h3>aaaaa</h3>
+                                        <h3>${{product.Name}}</h3>
                                     </a>
                                     <div class="product-price">
-                                        $35.00
+                                        <a href="#">
+                                        <h6>${{product.Desc}}</h6>
+                                    </a>
                                     </div>
                                 </div>
                             </div>
