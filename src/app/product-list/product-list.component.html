@@ -1,38 +1,33 @@
-<div class="list">
-<div class="col-lg-9 order-1 order-lg-2">
-	<div class="product-list">
-		<div class="row">
-
-			<div ngclass="col-lg-4 col-sm-6" *ngFor="let product of products">
-				<div class="product-item">
-					<div class="pi-pic">
-						<img [src]="product.Images" alt="" width="280" height="280">
-						<div class="icon">
-							<i class="icon_heart_alt"></i>
-						</div>
-						<ul>
-							<li class="w-icon active"><a href="#">Add To Cart</a></li>
-							<li class="w-icon active" type="button" routerLink="/home/product-detail/{{product.ID}}">
-								<a>Detail</a></li>
-
-						</ul>
+<div class="product-list">
+	<div class="row">
+		<div ngclass="col-lg-4 col-sm-6" *ngFor="let product of products">
+			<div class="product-item">
+				<div class="pi-pic">
+					<img [src]="product.Images" alt="" width="280" height="280">
+					<div class="icon">
+						<i class="icon_heart_alt"></i>
 					</div>
-					<div class="pi-text">
+					<ul>
+						<li class="w-icon active"><a href="#">Add To Cart</a></li>
+						<li class="w-icon active" type="button" routerLink="/home/product-detail/{{product.ID}}">
+							<a>Detail</a></li>
+
+					</ul>
+				</div>
+				<div class="pi-text">
+					<a>
+						<h3>{{product.Name}}</h3>
+					</a>
+					<div class="product-price">
 						<a>
-							<h3>{{product.Name}}</h3>
+							<h4>{{product.Price}}$</h4>
 						</a>
-						<div class="product-price">
-							<a>
-								<h4>{{product.Price}}$</h4>
-							</a>
-						</div>
-						<div>
-							<h5>{{product.status ? 'In stock': 'Out stock'}}</h5>
-						</div>
+					</div>
+					<div>
+						<h5>{{product.status ? 'In stock': 'Out stock'}}</h5>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </div>
