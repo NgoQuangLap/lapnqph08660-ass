@@ -12,6 +12,8 @@ import { ProductService } from './product.service';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { AdminComponent } from './admin/admin.component';
+import { FrontendComponent } from './frontend/frontend.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductAddComponent,
     ProductEditComponent,
     ProductDetailComponent,
+    AdminComponent,
+    FrontendComponent,
 
   ],
   imports: [
@@ -30,7 +34,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     HttpClientModule,
     NgbModule
   ],
-  providers: [ProductService],
+  providers: [ProductService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

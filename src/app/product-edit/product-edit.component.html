@@ -1,38 +1,42 @@
-<div class="col-md-12">
-	<h2 class="h3 mb-3 text-black">Chỉnh Sửa Sản Phẩm</h2>
-</div>
-<div class="col-md-7" *ngIf="product">
-	<div class="p-3 p-lg-5 border">
-		<div class="form-group row">
-			<div class="col-md-12">
-				<label for="c_email" class="text-black" >Hình Ảnh <span class="text-danger" >*</span></label>
-				<input type="text" class="form-control" [src]="product.Images" [(ngModel)]="product.Images"  placeholder="Gắn link ảnh của bạn vào đây!">
-                  </div>
-			</div>
-			<div class="form-group row">
-				<div class="col-md-12">
-					<label for="c_email" class="text-black">Tên Sản Phẩm <span class="text-danger">*</span></label>
-					<input type="text" class="form-control" [(ngModel)]="product.Name"  placeholder="">
-                  </div>
-				</div>
+<section id="main-content">
+	<section class="wrapper">
+		<header class="d-flex mb-3 pt-5 justify-content-between">
+			<h2>Chỉnh Sửa Sản Phẩm</h2>
+		</header>
+		<div class="col-md-7" *ngIf="product">
+			<div class="p-3 p-lg-5 border">
 				<div class="form-group row">
 					<div class="col-md-12">
-						<label for="c_email" class="text-black">Giá Sản Phẩm <span class="text-danger">*</span></label>
-						<input type="text" class="form-control" [(ngModel)]="product.Price" placeholder="">
+						<label for="c_email" class="text-black" >Hình Ảnh <span class="text-danger" >*</span></label>
+						<input type="text" class="form-control" [src]="product.Images" [(ngModel)]="product.Images"  placeholder="Gắn link ảnh của bạn vào đây!">
                   </div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-12">
-							<label for="c_message" class="text-black">Thông Tin Sản Phẩm</label>
-							<textarea name="text" id="c_message" cols="30" rows="7" class="form-control" [(ngModel)]="product.Desc"></textarea>
-						</div>
-					</div>
-
-
-					<div class="form-group row">
-						<div class="col-lg-12">
-							<input type="button" class="btn btn-primary btn-lg btn-block" (click)="updateProduct()" value="Chỉnh Sửa Sản Phẩm">
+							<label for="c_email" class="text-black">Tên Sản Phẩm <span class="text-danger">*</span></label>
+							<input type="text" class="form-control" [(ngModel)]="product.Name"  placeholder="">
                   </div>
 						</div>
-					</div>
-				</div>
+						<div class="form-group row">
+							<div class="col-md-12">
+								<label for="c_email" class="text-black">Giá Sản Phẩm <span class="text-danger">*</span></label>
+								<input type="text" class="form-control" [(ngModel)]="product.Price" placeholder="">
+                  </div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-12">
+									<label for="c_message" class="text-black">Thông Tin Sản Phẩm</label>
+									<textarea name="text" id="c_message" cols="30" rows="7" class="form-control" [(ngModel)]="product.Desc"></textarea>
+								</div>
+							</div>
+
+
+							<div class="form-group row">
+								<div class="col-lg-12">
+									<input type="button" class="btn btn-primary btn-lg btn-block" (click)="updateProduct()" value="Chỉnh Sửa Sản Phẩm">
+                  </div>
+								</div>
+							</div>
+						</div>
+	</section>
+</section>

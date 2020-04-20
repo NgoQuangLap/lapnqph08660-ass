@@ -1,23 +1,38 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductManagerComponent } from './product-manager/product-manager.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ProductAddComponent } from './product-add/product-add.component';
-import { ProductEditComponent } from './product-edit/product-edit.component';
-
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { ProductListComponent } from "./product-list/product-list.component";
+import { ProductManagerComponent } from "./product-manager/product-manager.component";
+import { ProductDetailComponent } from "./product-detail/product-detail.component";
+import { ProductAddComponent } from "./product-add/product-add.component";
+import { ProductEditComponent } from "./product-edit/product-edit.component";
+import { AdminComponent } from "./admin/admin.component";
+import { FrontendComponent } from "./frontend/frontend.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'product', pathMatch:'full'},
-  {path: 'product', component: ProductListComponent},
-  {path: 'manager', component: ProductManagerComponent},
-  {path: 'product-detail/:productID', component: ProductDetailComponent},
-  {path: 'product-add', component: ProductAddComponent},
-  {path: 'product-edit/:productID', component: ProductEditComponent},
+  { path: "", redirectTo: "home", pathMatch: "full" },
+  {
+    path: "home", component: FrontendComponent,
+    children: [
+      { path: "", redirectTo: "product", pathMatch: "full"},
+      { path: "product", component: ProductListComponent },
+      { path: "product-detail/:productID", component: ProductDetailComponent }
+    ]
+  },
+
+  {
+    path: "admin",
+    component: AdminComponent,
+    children: [
+      { path: "", redirectTo: "manager", pathMatch: "full" },
+      { path: "manager", component: ProductManagerComponent },
+      { path: "product-add", component: ProductAddComponent },
+      { path: "product-edit/:productID", component: ProductEditComponent }
+    ]
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
