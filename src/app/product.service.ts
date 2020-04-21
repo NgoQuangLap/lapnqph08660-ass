@@ -13,13 +13,13 @@ export class ProductService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.api);
   }
-  getProduct(id): Observable<Product> {
-    return this.http.get<Product>(`${this.api}/${id}`);
+  getProduct(ID): Observable<Product> {
+    return this.http.get<Product>(`${this.api}/${ID}`);
     // return this.products.find(product => product.id == id);
   }
 
-  removeProduct(id): Observable<Product> {
-    return this.http.delete<Product>(`${this.api}/${id}`);
+  removeProduct(ID): Observable<Product> {
+    return this.http.delete<Product>(`${this.api}/${ID}`);
   }
 
   addProduct(product): Observable<Product> {
@@ -27,6 +27,6 @@ export class ProductService {
   }
 
   updateProduct(product) {
-    return this.http.put<Product>(`${this.api}/${product.id}`, product);
+    return this.http.put<Product>(`${this.api}/${product.ID}`, product);
   }
 }
