@@ -1,3 +1,7 @@
 .site-section{
   float: left;
 }
+
+.filter-widget{
+  margin-top: 20px;
+}
