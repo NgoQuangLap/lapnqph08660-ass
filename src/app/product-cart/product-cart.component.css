@@ -1,0 +1,43 @@
+.quantity {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 33px;
+}
+
+.quantity .pro-qty {
+	width: 123px;
+	height: 46px;
+	border: 2px solid #ebebeb;
+	padding: 0 15px;
+	float: left;
+	margin-right: 14px;
+}
+
+.quantity .pro-qty .qtybtn {
+	font-size: 24px;
+	color: #b2b2b2;
+	float: left;
+	line-height: 38px;
+	cursor: pointer;
+	width: 18px;
+}
+
+.quantity .pro-qty .qtybtn.dec {
+	font-size: 30px;
+}
+
+.quantity .pro-qty input {
+	text-align: center;
+	width: 52px;
+	font-size: 14px;
+	font-weight: 700;
+	border: none;
+	color: #4c4c4c;
+	line-height: 40px;
+	float: left;
+}
+
+.quantity .primary-btn.pd-cart {
+	padding: 14px 70px 10px;
+}
