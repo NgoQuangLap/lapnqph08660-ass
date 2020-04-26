@@ -9,25 +9,25 @@
 				<div class="form-group row">
 					<div class="col-md-12">
 						<label  class="text-black" >Hình Ảnh <span class="text-danger" >*</span></label>
-						<input type="text" class="form-control" [src]="product.Images" [(ngModel)]="product.Images" placeholder="Gắn link ảnh của bạn vào đây!">
+						<input type="text" id="hinhanh" class="form-control" [src]="product.Images" [(ngModel)]="product.Images" placeholder="Gắn link ảnh của bạn vào đây!">
                   </div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-12">
 							<label  class="text-black" >Tên Sản Phẩm <span class="text-danger">*</span></label>
-							<input type="text" class="form-control" [(ngModel)]="product.Name" placeholder="">
+							<input type="text" id="TenSP" class="form-control" [(ngModel)]="product.Name" placeholder="">
                   </div>
 						</div>
 						<div class="form-group row">
 							<div class="col-md-12">
 								<label  class="text-black" >Giá Sản Phẩm <span class="text-danger">*</span></label>
-								<input type="text" class="form-control" [(ngModel)]="product.Price" placeholder="">
+								<input type="text" id="GiaSP" class="form-control" [(ngModel)]="product.Price" placeholder="">
                   </div>
 							</div>
 							<div class="form-group row">
 								<div class="col-md-12">
 									<label for="c_message" class="text-black" >Thông Tin Sản Phẩm</label>
-									<textarea name="text" id="c_message" cols="30" rows="7" class="form-control" [(ngModel)]="product.Desc"></textarea>
+									<textarea name="text" id="Thongtin" cols="30" rows="7" class="form-control" [(ngModel)]="product.Desc"></textarea>
 								</div>
 							</div>
 
@@ -41,3 +41,30 @@
 						</div>
 	</section>
 </section>
+<script>
+  function validate(){
+    var anh = document.getElementById("hinhanh").value;
+      if(anh == ""){
+        alert("Mời bạn hãy gắn link ảnh của Sản Phẩm");
+        return false;
+      }
+    var ten = document.getElementById("TenSP").value;
+      if(ten == ""){
+        alert("Mời bạn hãy nhập tên của Sản Phẩm");
+        return false;
+      }
+    var gia = document.getElementById("GiaSP").value;
+      if(gia == "" || isNaN(gia) == true){
+        alert("Mời bạn hãy nhập giá của Sản Phẩm và Giá Sản Phẩm phải ở dạng số");
+        return false;
+      }
+    var thongtin = document.getElementById("Thongtin").value;
+      if(thongtin == ""){
+        alert("Mời bạn hãy nhập giá của Sản Phẩm");
+        return false;
+      }
+    else{
+      return true;
+    }
+  }
+</script>

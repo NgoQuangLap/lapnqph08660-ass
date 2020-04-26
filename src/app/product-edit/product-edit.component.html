@@ -39,3 +39,30 @@
 						</div>
 	</section>
 </section>
+<script>
+  function validate(){
+    var anh = document.getElementById("hinhanh").value;
+      if(anh == ""){
+        alert("Mời bạn hãy gắn link ảnh của Sản Phẩm");
+        return false;
+      }
+    var ten = document.getElementById("TenSP").value;
+      if(ten == ""){
+        alert("Mời bạn hãy nhập tên của Sản Phẩm");
+        return false;
+      }
+    var gia = document.getElementById("GiaSP").value;
+      if(gia == "" || isNaN(gia) == true){
+        alert("Mời bạn hãy nhập giá của Sản Phẩm và Giá Sản Phẩm phải ở dạng số");
+        return false;
+      }
+    var thongtin = document.getElementById("Thongtin").value;
+      if(thongtin == ""){
+        alert("Mời bạn hãy nhập giá của Sản Phẩm");
+        return false;
+      }
+    else{
+      return true;
+    }
+  }
+</script>
