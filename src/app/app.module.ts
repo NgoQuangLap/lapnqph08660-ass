@@ -14,6 +14,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { AdminComponent } from './admin/admin.component';
 import { FrontendComponent } from './frontend/frontend.component';
 import { ProductCartComponent } from './product-cart/product-cart.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProductCartComponent } from './product-cart/product-cart.component';
     AdminComponent,
     FrontendComponent,
     ProductCartComponent,
+    ContactComponent,
 
   ],
   imports: [

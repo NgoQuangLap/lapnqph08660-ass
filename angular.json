@@ -27,6 +27,7 @@
               "src/css/backend.css",
               "src/css/font-awesome.min.css",
               "src/css/frontend.css",
+              "src/css/style.css",
               "src/styles.css"
             ],
             "scripts": []

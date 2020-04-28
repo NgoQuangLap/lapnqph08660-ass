@@ -8,10 +8,12 @@ import { ProductEditComponent } from "./product-edit/product-edit.component";
 import { AdminComponent } from "./admin/admin.component";
 import { FrontendComponent } from "./frontend/frontend.component";
 import { ProductCartComponent } from "./product-cart/product-cart.component";
+import { ContactComponent } from "./contact/contact.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "cart", component: ProductCartComponent},
+    {path: "contact", component: ContactComponent},
   {
     path: "home", component: FrontendComponent,
     children: [
